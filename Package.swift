@@ -3,10 +3,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "GoogleMLKitSwiftPM",
+    name: "MLKitTextRecognition",
     platforms: [.iOS(.v14)],
     products: [
-        .library(name: "TextRecognition", targets: ["MLKitTextRecognition", "MLKitTextRecognitionCommon", "MLImage", "MLKitVision", "Common"])
+        .library(name: "MLKitTextRecognition", targets: ["MLKitTextRecognition", "MLKitTextRecognitionCommon", "MLImage", "MLKitVision", "Common"])
     ],
     dependencies: [
         .package(url: "https://github.com/google/promises.git", from: "2.1.1"),
