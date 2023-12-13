@@ -4,9 +4,20 @@ import PackageDescription
 
 let package = Package(
     name: "MLKitTextRecognition",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v13)],
     products: [
-        .library(name: "MLKitTextRecognition", targets: ["MLKitTextRecognition", "MLKitTextRecognitionCommon", "MLImage", "MLKitVision", "Common"])
+        .library(
+            name: "MLKitTextRecognition",
+            targets: ["MLKitTextRecognition", "MLKitTextRecognitionCommon", "MLImage", "MLKitVision", "Common"]
+        ),
+        .library(
+            name: "MLKitBarcodeScanning",
+            targets: ["MLKitBarcodeScanning", "MLImage", "MLKitVision", "Common"]
+        ),
+        .library(
+            name: "MLKitFaceDetection",
+            targets: ["MLKitFaceDetection", "MLImage", "MLKitVision", "Common"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/google/promises.git", from: "2.1.1"),
